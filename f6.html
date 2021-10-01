@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task 6</title>
+</head>
+<body>
+  <h1>Вывод в консоли</h1>
+</body>
+<script>
+
+var x = [
+ [5, 3, 6],
+ [7, 11, 2],
+ [15, 9, 4]
+];
+var y = fmatrix(x)
+for (i=0; i<y.length; i++) {
+    for (j=0; j<y.length; j++)
+    console.log(y[i][j] )
+}
+function fmatrix(x){
+  let min=x[0][0];
+  var i,j, l=x.length; l=x.length //длина массива
+  for (i=0; i<l; i++) {
+      for (j=0; j<l; j++)
+      if(x[i][j] <=min) min=x[i][j]// поиск минимального
+  }
+  
+  for (i=0; i<l; i++) {
+      for (j=0; j<l; j++)
+    if(x[i][j]%2!=0) x[i][j] *=min  // поиск нечётного и умножение на минимальное 
+  } 
+  return x;
+}
+
+
+</script>
+</html>

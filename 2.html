@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2</title>
+</head>
+<body>
+    <h1>Вывод в консоли</h1>
+    <!-- Напишите функцию генератор chunkArray которая возвращает итератор возвращающий части массива указанной длинны.  -->
+    <script>
+      
+      function* chunkIterator(array, sliceLength){
+            for(let i=0 ; i < (Math.ceil(array.length / sliceLength)) ; ){
+                 yield array.slice(i * sliceLength, ++i * sliceLength); 
+                 //++i * sliceLength увеличивает значение, возвращает и умножает на длину куска, при передаче первого параметра i без изменений
+                //yield вызывает остановку функции-генератора и возвращает текущее значение выражения
+            }
+        }
+        const iterator = chunkIterator([1,2,3,4,5,6,7,8,9,10], 3);
+        for(let slice of iterator){
+            console.log(slice);
+        }
+                   
+    </script>
+</body>
+</html>

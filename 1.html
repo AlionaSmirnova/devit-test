@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First task</title>
+</head>
+<body>
+    <div class="article">
+        <h3> Функция nodeChildCount</h3>
+        <p>Первый абзац</p>
+        <p>Второй абзац</p>
+        <p>Третий абзац</p>
+    </div>
+    <button type="button" onclick="nodeChildCount()" id="testButton">Click me</button>
+</body>
+<script>
+var articleDiv = document.querySelector("div.article");
+var nodes = articleDiv.childNodes;
+function nodeChildCount(){
+for(var i=0; i<nodes.length;i++){
+    console.log(articleDiv.childElementCount);
+}
+}
+</script>
+</html>
